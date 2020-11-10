@@ -1,19 +1,23 @@
 {
-  "name": "guia-hoteles",
-  "version": "1.0.0",
-  "description": "Nuestro primer proyecto de NodeJS",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/982h3uibjkn6tyghb/guia-hoteles.git"
-  },
-  "author": "Milton C. Genovese",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/982h3uibjkn6tyghb/guia-hoteles/issues"
-  },
-  "homepage": "https://github.com/982h3uibjkn6tyghb/guia-hoteles#readme"
+    "name": "guia-hoteles",
+    "version": "1.0.0",
+    "description": "Nuestro primer proyecto de NodeJS",
+    "main": "index.html",
+    "scripts": {
+        "dev": "lite-server",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/982h3uibjkn6tyghb/guia-hoteles.git"
+    },
+    "author": "Milton C. Genovese",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/982h3uibjkn6tyghb/guia-hoteles/issues"
+    },
+    "homepage": "https://github.com/982h3uibjkn6tyghb/guia-hoteles#readme",
+    "devDependencies": {
+        "lite-server": "^2.5.4"
+    }
 }
