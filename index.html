@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- build:css dist/index.css -->
+    <!-- build:css css/index.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
-    <!-- end build -->
+    <!-- endbuild -->
 
     <title>Guia Hoteles</title>
 </head>
@@ -247,39 +247,12 @@
         </diV>
     </footer>
 
-    <!-- build:js dist/index.js -->
-    <script>
-        $(function() {
-            $("[data-toggle='tooltip']").tooltip();
-            $("[data-toggle='popover']").popover();
-            $('.carousel').carousel({
-                interval: 500
-            });
-
-            $('#contacto').on('show.bs.modal', function(e) {
-                console.log('el modal se esta mostrando');
-
-                $('#contactoBtn').removeClass('btn-outline-success');
-                $('#contactoBtn').addClass('btn-primary');
-                $('#contactoBtn').prop('disabled', true);
-
-            });
-            $('#contacto').on('shows.bs.modal', function(e) {
-                console.log('el modal mostro');
-            });
-            $('#contacto').on('hide.bs.modal', function(e) {
-                console.log('el modal se esta ocultando');
-            });
-            $('#contacto').on('hidden.bs.modal', function(e) {
-                console.log('el modal se oculto');
-            });
-
-        });
-    </script>
+    <!-- build:js js/main.js -->
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- end build -->
+    <script src="js/index.js"></script>
+    <!-- endbuild -->
 </body>
 
 </html>
