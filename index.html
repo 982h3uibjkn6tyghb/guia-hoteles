@@ -6,11 +6,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- build:css dist/index.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
-
+    <!-- end build -->
 
     <title>Guia Hoteles</title>
 </head>
@@ -74,8 +74,6 @@
             </div>
         </div>
         <hr>
-
-        <!-- carrusel -->
 
         <div id="carouselControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -184,7 +182,7 @@
                     <h5 class="card-title">Hotel San Pablo</h5>
                     <h6 class="card-subtitle text-muted">Brasil</h6>
                     <p class="card-text">Hotel ubicado en pleno centro.</p>
-                    <button class="btn btn-outline-success" data-toggle="modal" data-target="#contacto">Contacto</button>
+                    <button class="btn btn-outline-success" data-toggle="modal" data-target="#contacto" id="contactoBtn">Contacto</button>
                 </div>
                 <div>
                     <button class="btn btn-primary btn-reserva" data-toggle="popover" title="Promociones" data-content="Consulta las promociones vigentes">Reservar</button>
@@ -249,24 +247,39 @@
         </diV>
     </footer>
 
-
-
-
-
-
-
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- build:js dist/index.js -->
     <script>
         $(function() {
             $("[data-toggle='tooltip']").tooltip();
             $("[data-toggle='popover']").popover();
             $('.carousel').carousel({
-                interval: 100
+                interval: 500
             });
+
+            $('#contacto').on('show.bs.modal', function(e) {
+                console.log('el modal se esta mostrando');
+
+                $('#contactoBtn').removeClass('btn-outline-success');
+                $('#contactoBtn').addClass('btn-primary');
+                $('#contactoBtn').prop('disabled', true);
+
+            });
+            $('#contacto').on('shows.bs.modal', function(e) {
+                console.log('el modal mostro');
+            });
+            $('#contacto').on('hide.bs.modal', function(e) {
+                console.log('el modal se esta ocultando');
+            });
+            $('#contacto').on('hidden.bs.modal', function(e) {
+                console.log('el modal se oculto');
+            });
+
         });
     </script>
+    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- end build -->
 </body>
 
 </html>
